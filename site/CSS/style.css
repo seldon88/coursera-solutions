@@ -14,13 +14,16 @@ h1 {
   }
 
   .row {
-    margin-bottom: 15px;
-  }
-  .row > div {
-    border: 2px solid red;
-    background-color: gray;
+    margin-right: -15px;
+    margin-left: -15px;
   }
 
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
 /********** Large devices only **********/
 @media (min-width: 992px) {
