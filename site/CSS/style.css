@@ -1,6 +1,7 @@
 /********** Base styles **********/
 h1 {
     margin-bottom: 15px;
+    align-content: center;
   }
   
   p {
@@ -9,6 +10,7 @@ h1 {
     width: 90%;
     height: 150px;
     margin-bottom: 10px;
+    float: left;
   }
 
 
