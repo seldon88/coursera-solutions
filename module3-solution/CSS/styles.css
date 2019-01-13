@@ -4,9 +4,6 @@ body {
   background-color: #fff;
   font-family: 'Oxygen', sans-serif;
   }
-  #head-name{
-    float: left;
-  }
 
 #header-nav {
     background-color: #0080ff;
@@ -36,6 +33,10 @@ body {
 }
 
 /********** Base styles **********/
+#main-content {
+width: 100%;	
+}
+
 h1 {
     margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
@@ -51,11 +52,11 @@ h1 {
     background-color: #ff0053;
     margin-bottom: 40px; 
     font-family: 'Courier New', Courier, monospace;
+	height: 1000px;
   }
 
-.col-xs-12{
-    margin-left: 40px;
-    margin-right: 40px; 
+.section{
+	margin: 0 40px;
     border: 1px solid black;
     position: relative;
     padding-top: 45px;
@@ -63,41 +64,28 @@ h1 {
     height: 1000px;
 }
 
-#p1{
-      border: 1px solid black;
-      position: absolute;
-      top: -1px;
-      right: -1px;
-      margin-top: 0px;
-      padding: 2px;
-      padding-left: 20px;
-      padding-right: 20px;
-      background-color:blue;
-      
+.p1{
+text-align: center;
 }
 
-#p2{
-    border: 1px solid black;
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    margin-top: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: maroon;
-    color: white;
-}
 
-#p3{
-    border: 1px solid black;
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    margin-top: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: lime;
-}
 .navbar-default .navbar-nav>li>a {
   color : white;
+}
+
+#title {
+	width: 100%;
+}
+
+.mycontainer {
+	width: 100%;
+}
+
+section {
+	width: 100%;
+	height: auto;
+}
+
+.row {
+	margin:0 2%;
 }
