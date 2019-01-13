@@ -50,20 +50,17 @@ h1 {
 .row > div{
     background-color: #ff0053;
     margin-bottom: 40px; 
-    float: left;
     font-family: 'Courier New', Courier, monospace;
   }
 
-.section{
+.col-xs-12{
     margin-left: 40px;
     margin-right: 40px; 
     border: 1px solid black;
     position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
     padding-top: 45px;
     padding-bottom: 5px;
-    background-color: #ff00ff;
+    height: 1000px;
 }
 
 #p1{
@@ -100,4 +97,7 @@ h1 {
     padding-left: 20px;
     padding-right: 20px;
     background-color: lime;
+}
+.navbar-default .navbar-nav>li>a {
+  color : white;
 }
