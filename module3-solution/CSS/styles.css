@@ -31,30 +31,25 @@ body {
   *{
     box-sizing: border-box;
 }
-
 /********** Base styles **********/
 #main-content {
 width: 100%;	
 }
-
 h1 {
     margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
     color: #222;   
   }
 
-  
 .row {
     margin-bottom: 20px;
   }
-
 .row > div{
     background-color: #ff0053;
     margin-bottom: 40px; 
     font-family: 'Courier New', Courier, monospace;
 	height: 1000px;
   }
-
 .section{
 	margin: 0 40px;
     border: 1px solid black;
@@ -63,30 +58,23 @@ h1 {
     padding-bottom: 5px;
     height: 1000px;
 }
-
 .p1{
 text-align: center;
 }
-
-
 .navbar-default .navbar-nav>li>a {
   color : white;
   text-align: center;
 }
-
 #title {
 	width: 100%;
 }
-
 .container {
 	width: 100%;
 }
-
 section {
 	width: 100%;
 	height: auto;
 }
-
 .row {
 	margin:0 2%;
 }
