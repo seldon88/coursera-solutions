@@ -13,7 +13,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 
 var dc = {};
 
-var homeHtml = "snippets/home-snippet.html";
+var homeHtmlUrl = "snippets/home-snippet.html";
 var allCategoriesUrl =
   "https://davids-restaurant.herokuapp.com/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
@@ -97,7 +97,7 @@ function buildAndShowHomeHTML (categories) {
 
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
-    homeHtml,
+    homeHtmlUrl,
     function (homeHtml) {
 
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
@@ -119,21 +119,22 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      
-      var homeHtmlToInsertIntoMainPage = "<section class='row'>";
+      var homeHtmlToInsertIntoMainPage = homeHtml;
+      homeHtmlToInsertIntoMainPage += "<section class='row'>";
     
       // Loop over categories
       for (var i = 0; i < chosenCategoryShortName.length; i++) {
         // Insert category values
+        var html = categoryHtml;
         var name = "" + chosenCategoryShortName[i].name;
         var short_name = chosenCategoryShortName[i].short_name;
-        homeHtml =
-          insertProperty(homeHtml, "name", name);
-          homeHtml =
-          insertProperty(homeHtml,
+        html =
+          insertProperty(html, "name", name);
+          html =
+          insertProperty(html,
                          "short_name",
                          short_name);
-                         homeHtmlToInsertIntoMainPage += homeHtml;
+                         homeHtmlToInsertIntoMainPage += html;
       }
     
       homeHtmlToInsertIntoMainPage += "</section>";
