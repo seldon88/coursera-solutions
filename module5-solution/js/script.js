@@ -85,7 +85,7 @@ $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
   //function(responseText){
   // document.querySelector("#main-content").innerHTML = responseText;
-  buildAndShowHomeHTML(allCategoriesUrl), // ***** <---- TODO: STEP 1: Substitute [...] ******
+  buildAndShowHomeHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitely setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
@@ -97,8 +97,8 @@ function buildAndShowHomeHTML (categories) {
 
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
-    homeHtmlUrl,
-    function (homeHtmlUrl) {
+    homeHtml,
+    function (homeHtml) {
 
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
@@ -125,20 +125,18 @@ function buildAndShowHomeHTML (categories) {
       // Loop over categories
       for (var i = 0; i < chosenCategoryShortName.length; i++) {
         // Insert category values
-        var homeHtmlUrl = categoryHtml;
         var name = "" + chosenCategoryShortName[i].name;
         var short_name = chosenCategoryShortName[i].short_name;
-        homeHtmlUrl =
-          insertProperty(homeHtmlUrl, "name", name);
-          homeHtmlUrl =
-          insertProperty(homeHtmlUrl,
+        homeHtml =
+          insertProperty(homeHtml, "name", name);
+          homeHtml =
+          insertProperty(homeHtml,
                          "short_name",
                          short_name);
-                         homeHtmlToInsertIntoMainPage += homeHtmlUrl;
+                         homeHtmlToInsertIntoMainPage += homeHtml;
       }
     
       homeHtmlToInsertIntoMainPage += "</section>";
-      console.log(homeHtmlToInsertIntoMainPage);
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
@@ -361,5 +359,5 @@ function insertItemPortionName(html,
 
 
 global.$dc = dc;
-
+console.log(homeHtmlToInsertIntoMainPage);
 })(window);
