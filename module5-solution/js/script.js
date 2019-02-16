@@ -125,7 +125,7 @@ function buildAndShowHomeHTML (categories) {
       // Loop over categories
       for (var i = 0; i < chosenCategoryShortName.length; i++) {
         // Insert category values
-        var html = categoryHtml;
+        var html = homeHtml;
         var name = "" + chosenCategoryShortName[i].name;
         var short_name = chosenCategoryShortName[i].short_name;
         html =
