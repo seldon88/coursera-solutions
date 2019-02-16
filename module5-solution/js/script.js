@@ -125,16 +125,16 @@ function buildAndShowHomeHTML (categories) {
       // Loop over categories
       for (var i = 0; i < chosenCategoryShortName.length; i++) {
         // Insert category values
-        var html = categories;
+        var homeHtmlUrl = categoryHtml;
         var name = "" + chosenCategoryShortName[i].name;
         var short_name = chosenCategoryShortName[i].short_name;
-        html =
-          insertProperty(html, "name", name);
-        html =
-          insertProperty(html,
+        homeHtmlUrl =
+          insertProperty(homeHtmlUrl, "name", name);
+          homeHtmlUrl =
+          insertProperty(homeHtmlUrl,
                          "short_name",
                          short_name);
-                         homeHtmlToInsertIntoMainPage += html;
+                         homeHtmlToInsertIntoMainPage += homeHtmlUrl;
       }
     
       homeHtmlToInsertIntoMainPage += "</section>";
