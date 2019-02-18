@@ -119,7 +119,7 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
+      var homeHtmlToInsertIntoMainPage = chosenCategoryShortName;
       homeHtmlToInsertIntoMainPage += "<section class='row'>";
     
       // Loop over categories
