@@ -130,6 +130,7 @@ function buildAndShowHomeHTML (categories) {
       // of how to do that.
       // ....
       insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+      console.log("questo è homethml" + homeHtml);
       console.log(homeHtmlToInsertIntoMainPage);
     },
     false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
