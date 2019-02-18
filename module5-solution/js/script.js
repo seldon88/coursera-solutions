@@ -97,7 +97,7 @@ function buildAndShowHomeHTML (categories) {
 
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
-    homeHtmlUrl,
+    homeHtmlUrl, // home-snippet
     function (homeHtml) {
 
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
@@ -105,7 +105,7 @@ function buildAndShowHomeHTML (categories) {
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
       var chosenCategoryShortName = 
-         chooseRandomCategory(categories);    // questo è un array
+         chooseRandomCategory(categories);    
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
@@ -119,20 +119,18 @@ function buildAndShowHomeHTML (categories) {
       // it into the home html snippet.
       //
       // var homeHtmlToInsertIntoMainPage = ....
-      var homeHtmlToInsertIntoMainPage = homeHtml;
+      var homeHtmlToInsertIntoMainPage = homeHtmlUrl;
       homeHtmlToInsertIntoMainPage += "<section class='row'>";
     
       // Loop over categories
-      for (var i = 0; i < chosenCategoryShortName.length; i++) {
+      for (var i = 0; i < categories.length; i++) {
         // Insert category values
         var html = homeHtml;
-        var name = "" + chosenCategoryShortName[i].name;
-        var short_name = chosenCategoryShortName[i].short_name;
-        html =
-          insertProperty(html, "name", name);
+       
+        var short_name = categories[i].short_name;
           html =
           insertProperty(html,
-                         "short_name",
+                         "randomCategoryShortName",
                          short_name);
                          homeHtmlToInsertIntoMainPage += html;
       }
@@ -179,6 +177,7 @@ dc.loadMenuItems = function (categoryShort) {
     buildAndShowMenuItemsHTML);
 };
 
+// var categoryHtml = "snippets/category-snippet.html";
 
 // Builds HTML for the categories page based on the data
 // from the server
@@ -364,3 +363,7 @@ function insertItemPortionName(html,
 global.$dc = dc;
 
 })(window);
+
+
+
+
